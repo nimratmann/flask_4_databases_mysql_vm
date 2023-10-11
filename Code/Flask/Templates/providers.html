@@ -1,0 +1,31 @@
+{% extends "index.html" %} 
+
+{% block content %}
+<section class="mb-6 table-container">
+    <div class="table">
+        <h2 class="text-xl mb-2">Providers Table</h2>
+        <table class="table-auto">
+            <thead>
+                <tr>
+                    <th class="px-4 py-2">Provider ID</th>
+                    <th class="px-4 py-2">First Name</th>
+                    <th class="px-4 py-2">Last Name</th>
+                    <th class="px-4 py-2">Specialty</th>
+                    <th class="px-4 py-2">Phone Number</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for provider in data2 %}
+                <tr>
+                    <td class="border px-4 py-2">{{ provider.provider_id }}</td>
+                    <td class="border px-4 py-2">{{ provider.first_name }}</td>
+                    <td class="border px-4 py-2">{{ provider.last_name }}</td>
+                    <td class="border px-4 py-2">{{ provider.specialty }}</td>
+                    <td class="border px-4 py-2">{{ provider.phone_num }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+{% endblock %}

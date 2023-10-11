@@ -1,0 +1,26 @@
+{% extends "index.html" %}
+
+{% block content %}
+    <div class="appointment-info">
+        <h2 class="text-xl mb-2">Appointments Table</h2>
+        <table class="table-auto">
+            <thead>
+                <tr>
+                    <th class="px-4 py-2">Appointment ID</th>
+                    <th class="px-4 py-2">Date</th>
+                    <th class="px-4 py-2">Provider ID</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for appointment in data3 %}
+                <tr>
+                    <td class="border px-4 py-2">{{ appointment.appointment_id }}</td>
+                    <td class="border px-4 py-2">{{ appointment.date }}</td>
+                    <td class="border px-4 py-2">{{ appointment.provider_id }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+{% endblock %}
