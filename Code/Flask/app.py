@@ -27,24 +27,24 @@ def patients():
     with engine.connect() as connection:
         query = text('SELECT * FROM patients')
         result = connection.execute(query)
-        db_data = result.fetchall()
-    return render_template('patients.html', data1=db_data)
+        db_data1 = result.fetchall()
+    return render_template('patients.html', data1=db_data1)
 
 @app.route('/providers')
 def providers():
     with engine.connect() as connection:
         query = text('SELECT * FROM providers')
         result = connection.execute(query)
-        db_data = result.fetchall()
-    return render_template('providers.html', data2=db_data)
+        db_data2 = result.fetchall()
+    return render_template('providers.html', data2=db_data2)
 
 @app.route('/appointments')
 def appointments():
     with engine.connect() as connection:
         query = text('SELECT * FROM appointments')
         result = connection.execute(query)
-        db_data = result.fetchall()
-    return render_template('appointments.html', data3=db_data)
+        db_data3 = result.fetchall()
+    return render_template('appointments.html', data3=db_data3)
 
 if __name__ == '__main__':
     app.run(debug=True)
