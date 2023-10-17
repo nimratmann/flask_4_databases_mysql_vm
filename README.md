@@ -34,4 +34,5 @@ This structure establishes a relationship where a doctor in the "providers" tabl
 1. A Flask application was developed in the local Google Shell environment to establish a connection with the MySQL instance through SQLAlchemy. Database credentials were securely stored in a .env file, and a .gitignore file was implemented to ensure these sensitive credentials were not pushed to the repository.
 
 The Flask application was executed with the python app.py command to connect to the MySQL instance. However, an error message was generated and Flask application did not deploy.
-- Error Message:
+- Error Message: TemplateNotFound jinja2.exceptions.TemplateNotFound: index.html
+
