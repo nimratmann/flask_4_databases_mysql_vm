@@ -21,4 +21,11 @@ Manually setting up and running a database on a cloud VM.
 6. Click "OK" to establish the new connection.
 
 ## DB Schema
-1. 
+1. Within my "healthcare" database, I first created two tables: "providers" and "patients."
+   - The "providers" table stores information about doctors, including their unique provider ID, first name, last name, specialty, and phone number.
+   - The "patients" table is for patient data and includes a patient ID (unique), first name, last name, date of birth, and a reference to their primary doctor through "primary_provider_id." This reference links to the
+     "provider_id" in the "providers" table, creating a connection between patients and their doctors.
+2. Then I added an "appointments" table for managing patient appointments. It includes fields for appointment ID, date, and references to the provider and patient. The references link back to the "provider_id" in the "providers" table and the "patient_id" in the "patients" table, enabling the tracking of appointments between patients and their doctors.
+3. Sample data was added to the tables using INSERT INTO.
+
+This structure establishes a relationship where a doctor in the "providers" table can be connected to multiple patients, creating a one-to-many relationship between doctors and patients.
