@@ -29,3 +29,9 @@ Manually setting up and running a database on a cloud VM.
 3. Sample data was added to the tables using INSERT INTO.
 
 This structure establishes a relationship where a doctor in the "providers" table can be connected to multiple patients, creating a one-to-many relationship between doctors and patients.
+
+## Flask Application Deployment
+1. A Flask application was developed in the local Google Shell environment to establish a connection with the MySQL instance through SQLAlchemy. Database credentials were securely stored in a .env file, and a .gitignore file was implemented to ensure these sensitive credentials were not pushed to the repository.
+
+The Flask application was executed with the python app.py command to connect to the MySQL instance. However, an error message was generated and Flask application did not deploy.
+- Error Message:
